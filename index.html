@@ -31,26 +31,15 @@
                                 <input type="hidden" name="field" value="text"/>
                             </div>
                         </div>
+			<div>Please enter search term in Devanāgarī or IAST convention. See <a href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html">Lucene Query Syntax</a> for accepted syntax.</div>
+
                         <div class="form-group" data-toggle="tooltip" data-placement="left"
-                             title="Search With Which Scripts?">
+                             title="NOT IMPLEMENTED: Search In Texts By Which Authors?">
                             <div class="col-md-12 col-xs-12">
-                                <select name="query-scripts" class="form-control"
-                                        data-template="templates:form-control">
-                                    <option value="all" selected="selected">With Devanagari and IAST</option>
-                                    <option value="sa-Deva">With Devanagari</option>
-                                    <option value="sa-Latn">With IAST</option>
-                                </select>
+                                <span class="app:work-authors"/>
                             </div>
                         </div>
-                        <div class="form-group" data-toggle="tooltip" data-placement="left" title="Use Which Index?">
-                            <div class="col-md-12 col-xs-12">
-                                <select name="index" class="form-control" data-template="templates:form-control">
-                                    <option value="ngram" selected="selected">Use NGram Index</option>
-                                    <option value="lucene">Use Lucene Full-Text Index</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group" data-toggle="tooltip" data-placement="left"
+			<div class="form-group" data-toggle="tooltip" data-placement="left"
                              title="Search Which Document Part?">
                             <div class="col-md-12 col-xs-12">
                                 <select multiple="multiple" name="tei-target" class="form-control"
@@ -60,23 +49,8 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group" data-toggle="tooltip" data-placement="left"
-                             title="Search In Texts By Which Authors?">
-                            <div class="col-md-12 col-xs-12">
-                                <span class="app:work-authors"/>
-                            </div>
-                        </div>
-                        <div class="form-group" data-toggle="tooltip" data-placement="left"
-                             title="Search Narrowly Or Broadly?">
-                            <div class="col-md-12 col-xs-12">
-                                <select name="query-scope" class="form-control" data-template="templates:form-control">
-                                    <option value="narrow" selected="selected">Perform Narrow Search</option>
-                                    <option value="broad">Perform Broad Search</option>
-                                </select>
-                            </div>
-                        </div>
                         <div id="bool-selection" class="form-group" data-toggle="tooltip" data-placement="left"
-                             title="Perform New Search or Continue Last Search?">
+                             title="NOT IMPLEMENTED: Perform New Search or Continue Last Search?">
                             <div class="col-md-12 col-xs-12">
                                 <select name="bool" class="form-control" data-template="templates:form-control">
                                     <option value="new" selected="selected">Perform New Search</option>
@@ -85,10 +59,6 @@
                                     <option value="not">NOT Last Search</option>
                                 </select>
                             </div>
-                        </div>
-                        <div>The automatic conversion of scripts does not handle wildcards reliably. In order to get the
-                            expected results please input the search term in IAST to look for words in texts encoded in
-                            Roman script and use Devanāgarī for texts encoded in Devanāgarī.
                         </div>
                     </div>
                 </form>

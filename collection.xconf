@@ -3,7 +3,12 @@
     <index xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
         <fulltext default="none" attributes="false"/>
         <lucene>
-            <text qname="tei:div"/>
+	  <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer">
+	      <param name="stopwords" type="org.apache.lucene.analysis.util.CharArraySet"/>
+	  </analyzer>
+	  <analyzer id="slp1" class="de.unihd.hra.libs.java.luceneTranscodingAnalyzer.TranscodingAnalyzer">
+	  </analyzer>
+            <text qname="//tei:text//tei:div" analyzer="slp1"/>
             <text qname="tei:head"/>
             <text match="//tei:sourceDesc/tei:biblFull/tei:titleStmt/tei:title"/>
             <text match="//tei:fileDesc/tei:titleStmt/tei:title"/>
